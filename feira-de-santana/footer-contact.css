@@ -1,0 +1,11 @@
+footer .footer-contact a {
+  color: #f2c95c;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+footer .footer-contact a:hover,
+footer .footer-contact a:focus-visible {
+  color: #fff7df;
+  text-decoration: underline;
+}
