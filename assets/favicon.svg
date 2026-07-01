@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#09235f"/>
+      <stop offset="1" stop-color="#010b2b"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="24" fill="url(#bg)"/>
+  <path d="M0 36 38 0h90v128H92z" fill="#12306f" opacity=".22"/>
+  <text x="64" y="54" text-anchor="middle" fill="#fff" font-family="Georgia, 'Times New Roman', serif" font-size="25" letter-spacing="1.7">ALEXPIAI</text>
+  <text x="64" y="91" text-anchor="middle" fill="#fff" font-family="Georgia, 'Times New Roman', serif" font-size="40" letter-spacing="1.2">OZ</text>
+</svg>
