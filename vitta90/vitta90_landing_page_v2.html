@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VITTA 90 | Inteligência em Saúde Corporativa</title>
+<meta name="description" content="Projeto-piloto de 90 dias para acompanhar saúde e bem-estar corporativo com simplicidade, confidencialidade e dados.">
+<style>
+:root{
+  --ink:#10221f; --muted:#60706c; --paper:#fbfcfa; --card:#ffffff;
+  --accent:#1f6a5b; --accent2:#dcebe6; --line:#e3e9e6; --dark:#0c2e28;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+.wrap{max-width:1160px;margin:auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:10;background:rgba(251,252,250,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:800;letter-spacing:.12em}.brand span{color:var(--accent)}
+a{text-decoration:none;color:inherit}
+.btn{display:inline-block;padding:14px 22px;border-radius:999px;background:var(--accent);color:white;font-weight:700;border:1px solid var(--accent)}
+.btn.secondary{background:transparent;color:var(--accent)}
+.hero{padding:96px 0 72px;background:radial-gradient(circle at 85% 20%,#dcebe6 0,transparent 30%)}
+.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.14em;font-weight:800;color:var(--accent)}
+h1{font-size:clamp(44px,7vw,82px);line-height:1.02;letter-spacing:-.045em;margin:18px 0 24px;max-width:920px}
+.lead{font-size:21px;color:var(--muted);max-width:760px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:58px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.stat b{font-size:30px;display:block}.stat span{color:var(--muted)}
+section{padding:82px 0}
+h2{font-size:clamp(32px,5vw,52px);line-height:1.08;letter-spacing:-.035em;margin:12px 0 20px}
+.sub{font-size:19px;color:var(--muted);max-width:760px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}
+.card .num{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--accent2);color:var(--accent);font-weight:800}
+.card h3{font-size:21px;margin:18px 0 8px}.card p{color:var(--muted);margin:0}
+.band{background:var(--dark);color:white}.band .sub{color:#bfd1cc}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
+.step{border-top:2px solid #6e9a90;padding-top:18px}.step b{font-size:22px}.step p{color:#bfd1cc}
+.phone{max-width:520px;margin:42px auto 0;background:#eef4f1;border:1px solid var(--line);border-radius:30px;padding:22px}
+.bubble{background:white;border-radius:18px 18px 18px 5px;padding:18px;margin:10px 0;box-shadow:0 8px 25px rgba(16,34,31,.06)}
+.options{display:grid;gap:8px;margin-top:14px}.option{border:1px solid #cfdcd7;border-radius:12px;padding:11px 13px;color:var(--accent);font-weight:650}
+.chart{margin-top:34px;background:white;border:1px solid var(--line);border-radius:24px;padding:28px}
+.metric{display:grid;grid-template-columns:160px 1fr 85px;align-items:center;gap:16px;margin:18px 0}
+.track{height:12px;background:#edf1ef;border-radius:99px;overflow:hidden}.fill{height:100%;background:var(--accent);border-radius:99px}
+.note{font-size:13px;color:var(--muted);margin-top:18px}
+.privacy{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.shield{background:var(--accent2);border-radius:28px;padding:36px;font-size:20px}
+.future{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.pill{padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:white;font-weight:650}
+.cta{text-align:center;background:linear-gradient(180deg,#edf5f2,#fbfcfa)}
+.cta h2{max-width:760px;margin:12px auto 18px}.cta .sub{margin:auto}
+footer{padding:32px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+@media(max-width:760px){
+ .stats,.grid,.timeline,.privacy{grid-template-columns:1fr}
+ .hero{padding-top:62px}.metric{grid-template-columns:95px 1fr 55px}
+ nav .btn{padding:10px 14px;font-size:13px}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav"><a class="brand" href="#"><span>VITTA</span> 90</a><a class="btn" href="#participar">Conhecer o projeto</a></div></nav>
+
+<header class="hero">
+<div class="wrap">
+<div class="eyebrow">Inteligência em Saúde Corporativa</div>
+<h1>Sua empresa mede resultados.<br>Mas mede como as pessoas estão?</h1>
+<p class="lead">Um projeto-piloto de 90 dias para acompanhar bem-estar, estresse, sono, energia e autocuidado — com uma experiência simples para o colaborador e dados consolidados para a empresa.</p>
+<div class="hero-actions"><a class="btn" href="#participar">Quero ser Empresa Parceira Fundadora</a><a class="btn secondary" href="#como">Como funciona</a></div>
+<div class="stats">
+<div class="stat"><b>90 dias</b><span>de acompanhamento</span></div>
+<div class="stat"><b>≈ 100</b><span>colaboradores no MVP</span></div>
+<div class="stat"><b>&lt; 1 min</b><span>para responder às avaliações</span></div>
+</div>
+</div>
+</header>
+
+<section>
+<div class="wrap">
+<div class="eyebrow">O desafio</div>
+<h2>O que você não mede, você não consegue acompanhar.</h2>
+<p class="sub">Produtividade, absenteísmo e turnover aparecem nos relatórios. Mas sinais de baixa energia, estresse, sono inadequado e perda de equilíbrio podem surgir antes. O VITTA 90 transforma percepções recorrentes em uma visão longitudinal de bem-estar.</p>
+<div class="grid">
+<div class="card"><div class="num">01</div><h3>Perceber</h3><p>Check-ins objetivos ajudam o colaborador a observar como está se sentindo.</p></div>
+<div class="card"><div class="num">02</div><h3>Acompanhar</h3><p>As mesmas dimensões são medidas ao longo do tempo para observar tendências.</p></div>
+<div class="card"><div class="num">03</div><h3>Aprender</h3><p>A empresa recebe uma leitura consolidada do grupo, preservando a confidencialidade individual.</p></div>
+</div>
+</div>
+</section>
+
+<section id="como" class="band">
+<div class="wrap">
+<div class="eyebrow" style="color:#8fc0b4">O projeto-piloto</div>
+<h2>90 dias. Uma pergunta central.</h2>
+<p class="sub">O acompanhamento frequente e o aumento de consciência sobre a própria saúde estão associados a uma evolução diferente dos indicadores de bem-estar?</p>
+<div class="timeline">
+<div class="step"><b>D0</b><p>Avaliação inicial e formação dos grupos.</p></div>
+<div class="step"><b>D30</b><p>Primeira comparação dos indicadores.</p></div>
+<div class="step"><b>D60</b><p>Acompanhamento da evolução.</p></div>
+<div class="step"><b>D90</b><p>Avaliação final e análise comparativa.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="eyebrow">Experiência</div>
+<h2>Simples como responder uma mensagem.</h2>
+<p class="sub">Sem aplicativo novo e sem formulários longos. O desenho do MVP prioriza perguntas objetivas e respostas por toque no WhatsApp.</p>
+<div class="phone">
+<div class="bubble"><b>Seu check-in da semana 👋</b><br>Como esteve sua energia nesta semana?
+<div class="options"><div class="option">Muito baixa</div><div class="option">Baixa</div><div class="option">Regular</div><div class="option">Boa</div><div class="option">Muito boa</div></div>
+</div>
+<div class="bubble">✓ Próxima pergunta</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="eyebrow">Desenho do MVP</div>
+<h2>Mais do que uma pesquisa de satisfação.</h2>
+<p class="sub">Os participantes podem ser distribuídos aleatoriamente entre um grupo com check-ins semanais e um grupo de comparação. Ambos realizam as avaliações principais em D0, D30, D60 e D90.</p>
+<div class="grid">
+<div class="card"><h3>Grupo de acompanhamento</h3><p>Avaliações principais + check-ins semanais curtos + estímulos de autoconsciência.</p></div>
+<div class="card"><h3>Grupo de comparação</h3><p>Avaliações principais nos quatro momentos, sem os check-ins semanais.</p></div>
+<div class="card"><h3>Análise</h3><p>Comparação da mudança dos indicadores ao longo dos 90 dias entre os grupos.</p></div>
+</div>
+</div>
+</section>
+
+<section style="background:#f1f5f3">
+<div class="wrap">
+<div class="eyebrow">Visão para a empresa</div>
+<h2>De percepção para dados.</h2>
+<p class="sub">Ao final, a empresa recebe indicadores agregados e comparativos da população participante. Os números abaixo são apenas uma demonstração visual.</p>
+<div class="chart">
+<div class="metric"><b>Bem-estar</b><div class="track"><div class="fill" style="width:71%"></div></div><span>Exemplo</span></div>
+<div class="metric"><b>Estresse*</b><div class="track"><div class="fill" style="width:59%"></div></div><span>Exemplo</span></div>
+<div class="metric"><b>Sono</b><div class="track"><div class="fill" style="width:64%"></div></div><span>Exemplo</span></div>
+<div class="metric"><b>Energia</b><div class="track"><div class="fill" style="width:73%"></div></div><span>Exemplo</span></div>
+<p class="note">*Escala e apresentação final serão definidas no protocolo. Estes gráficos não representam resultados reais nem promessa de resultado.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap privacy">
+<div>
+<div class="eyebrow">Privacidade desde o início</div>
+<h2>Saúde é individual. Inteligência pode ser coletiva.</h2>
+<p class="sub">O projeto é desenhado para que informações individuais de saúde sejam tratadas com confidencialidade. A empresa recebe resultados consolidados e agregados, com participação voluntária, consentimento e governança adequada de dados.</p>
+</div>
+<div class="shield"><b>Princípio do projeto</b><br><br>O RH não precisa saber “quem respondeu o quê” para compreender tendências coletivas e apoiar uma cultura de saúde.</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="eyebrow">Visão de futuro</div>
+<h2>Começamos simples para aprender rápido.</h2>
+<p class="sub">O MVP valida primeiro o comportamento e a utilidade do acompanhamento. A arquitetura futura pode incorporar novas fontes de dados sem mudar a essência do produto.</p>
+<div class="future"><span class="pill">Check-ins</span><span class="pill">Dados longitudinais</span><span class="pill">Wearables</span><span class="pill">Exames</span><span class="pill">Inteligência Artificial</span><span class="pill">Saúde corporativa</span></div>
+</div>
+</section>
+
+<section id="participar" class="cta">
+<div class="wrap">
+<div class="eyebrow">Empresa Parceira Fundadora</div>
+<h2>Sua empresa pode participar da construção dessa nova forma de acompanhar saúde e bem-estar.</h2>
+<p class="sub">Estamos selecionando uma empresa para realizar o MVP com aproximadamente 100 colaboradores durante 90 dias.</p>
+<div class="hero-actions" style="justify-content:center"><a class="btn" href="https://wa.me/5511944815191?text=Ol%C3%A1%2C%20Alex%21%20Gostaria%20de%20conhecer%20melhor%20o%20projeto%20VITTA%2090." target="_blank" rel="noopener">Quero conversar sobre o MVP</a></div>
+<p class="note">Duração: 90 dias · Aproximadamente 100 participantes · Formato digital · Participação voluntária · Relatório consolidado</p>
+</div>
+</section>
+
+<footer><div class="wrap"><b>VITTA 90</b> · Inteligência em Saúde Corporativa<br>Projeto-piloto. Conteúdo informativo; não substitui avaliação, diagnóstico ou atendimento médico.</div></footer>
+</body>
+</html>
