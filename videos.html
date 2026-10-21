@@ -65,8 +65,12 @@
     </div>
   </main>
   <script>
+    const videos = [...document.querySelectorAll("video")];
     document.querySelectorAll(".card").forEach((card) => {
       const video = card.querySelector("video");
+      video.addEventListener("play", () => {
+        videos.forEach((other) => { if (other !== video) other.pause(); });
+      });
       const error = card.querySelector(".video-error");
       video.addEventListener("error", () => { error.hidden = false; });
     });
