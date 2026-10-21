@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vídeos do Dr. Alex Piai Ozores reunidos para visualização e análise.">
+  <title>Vídeos | Dr. Alex Piai Ozores</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f7f8fa; color: #17212b; }
+    main { max-width: 1440px; margin: 0 auto; padding: 40px 24px 64px; }
+    h1 { margin: 0 0 8px; font-size: clamp(1.75rem, 3vw, 2.5rem); }
+    .intro { margin: 0 0 28px; color: #526171; }
+    .grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+    .card { min-width: 0; padding: 16px; border: 1px solid #e1e6eb; border-radius: 12px; background: #fff; }
+    .card h2 { margin: 0 0 14px; font-size: 1.05rem; line-height: 1.35; }
+    video { display: block; width: 100%; aspect-ratio: 9 / 16; border-radius: 8px; background: #101820; object-fit: contain; }
+    .copy { width: 100%; min-height: 42px; margin-top: 14px; padding: 9px 12px; border: 1px solid #245778; border-radius: 7px; background: #fff; color: #174663; font: inherit; font-weight: 600; cursor: pointer; }
+    .copy:hover, .copy:focus-visible { background: #eaf3f8; }
+    .copy:focus-visible { outline: 3px solid #6bb6df; outline-offset: 2px; }
+    .video-error { margin: 10px 0 0; font-size: .9rem; line-height: 1.4; color: #7d342d; }
+    .video-error[hidden] { display: none; }
+    .video-error a { color: inherit; }
+    @media (max-width: 1100px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 700px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 480px) { main { padding: 28px 16px 48px; } .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Vídeos do Dr. Alex Piai Ozores</h1>
+    <p class="intro">Reproduza um vídeo por vez ou copie o link direto de cada arquivo.</p>
+    <div class="grid">
+      <section class="card">
+        <h2>Depoimento 1</h2>
+        <video controls preload="metadata" playsinline aria-label="Depoimento 1" src="assets/depoimento%201.mov"></video>
+        <p class="video-error" hidden>Não foi possível reproduzir neste navegador. <a href="assets/depoimento%201.mov">Abrir o arquivo</a>.</p>
+        <button class="copy" type="button" data-src="assets/depoimento%201.mov">Copiar link do vídeo</button>
+      </section>
+      <section class="card">
+        <h2>Depoimento 2</h2>
+        <video controls preload="metadata" playsinline aria-label="Depoimento 2" src="assets/depoimento%202.mov"></video>
+        <p class="video-error" hidden>Não foi possível reproduzir neste navegador. <a href="assets/depoimento%202.mov">Abrir o arquivo</a>.</p>
+        <button class="copy" type="button" data-src="assets/depoimento%202.mov">Copiar link do vídeo</button>
+      </section>
+      <section class="card">
+        <h2>Alta Miopia</h2>
+        <video controls preload="metadata" playsinline aria-label="Alta Miopia" src="assets/Alta%20miopia.mov"></video>
+        <p class="video-error" hidden>Não foi possível reproduzir neste navegador. <a href="assets/Alta%20miopia.mov">Abrir o arquivo</a>.</p>
+        <button class="copy" type="button" data-src="assets/Alta%20miopia.mov">Copiar link do vídeo</button>
+      </section>
+      <section class="card">
+        <h2>Congresso</h2>
+        <video controls preload="metadata" playsinline aria-label="Congresso" src="assets/congresso.mov"></video>
+        <p class="video-error" hidden>Não foi possível reproduzir neste navegador. <a href="assets/congresso.mov">Abrir o arquivo</a>.</p>
+        <button class="copy" type="button" data-src="assets/congresso.mov">Copiar link do vídeo</button>
+      </section>
+      <section class="card">
+        <h2>Cirurgia</h2>
+        <video controls preload="metadata" playsinline aria-label="Cirurgia" src="assets/cirugia.mp4"></video>
+        <p class="video-error" hidden>Não foi possível reproduzir neste navegador. <a href="assets/cirugia.mp4">Abrir o arquivo</a>.</p>
+        <button class="copy" type="button" data-src="assets/cirugia.mp4">Copiar link do vídeo</button>
+      </section>
+    </div>
+  </main>
+  <script>
+    document.querySelectorAll(".card").forEach((card) => {
+      const video = card.querySelector("video");
+      const error = card.querySelector(".video-error");
+      video.addEventListener("error", () => { error.hidden = false; });
+    });
+
+    document.querySelectorAll(".copy").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const url = new URL(button.dataset.src, document.baseURI).href;
+        try {
+          await navigator.clipboard.writeText(url);
+          button.textContent = "Link copiado!";
+          setTimeout(() => { button.textContent = "Copiar link do vídeo"; }, 2000);
+        } catch {
+          window.prompt("Copie o link do vídeo:", url);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
